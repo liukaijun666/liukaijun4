@@ -1,0 +1,22 @@
+server:
+  port: 9003
+spring:
+  application:
+    name: eureka-client-provider
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    username: root
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9002/eureka
+    registry-fetch-interval-seconds: 30
+  instance:
+    ip-address: 127.0.0.1
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 10
+    lease-renewal-interval-in-seconds: 10
+
